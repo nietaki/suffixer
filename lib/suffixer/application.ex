@@ -10,6 +10,7 @@ defmodule Suffixer.Application do
     children = [
       # Starts a worker by calling: Suffixer.Worker.start_link(arg)
       # {Suffixer.Worker, arg},
+      {Suffixer.Web, [_config = [], _opts = []]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
