@@ -41,6 +41,9 @@ defmodule TrieTest do
       |> Trie.insert("add", :add)
       |> Trie.insert("zapped", :zapped)
 
+    assert Trie.new() == Trie.lookup(trie, "kkdljflskfjl")
+    assert %Trie{value: :zapped} == Trie.lookup(trie, "zapped")
+
     assert Trie.lookup_value(trie, "abc") == :abc
     assert Trie.lookup_value(trie, "add") == :add
     assert Trie.lookup_value(trie, "zapped") == :zapped

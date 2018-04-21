@@ -58,7 +58,7 @@ defmodule Trie do
   def lookup(trie = %__MODULE__{}, [char | rest]) do
     case get(trie, char) do
       nil ->
-        nil
+        new()
       child = %__MODULE__{} ->
         lookup(child, rest)
     end
