@@ -14,7 +14,7 @@ defmodule Suffixer.Application do
     children = [
       # Starts a worker by calling: Suffixer.Worker.start_link(arg)
       # {Suffixer.Worker, arg},
-      {Suffixer.Server, [name: Suffixer.Server]},
+      # {Suffixer.Server, [name: Suffixer.Server]},
       {Suffixer.Web, [_config = [], [port: port]]},
     ]
 
