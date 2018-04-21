@@ -30,7 +30,9 @@ defmodule Suffixer.Server do
   @impl true
   def handle_cast(:populate, _state) do
     Logger.info("reading wordlist...")
-    words_path = Path.join(__DIR__, "../../assets/corncob_lowercase_modified.txt")
+
+    # this relative path hack works for me locally and should work on Heroku
+    words_path = "./assets/corncob_lowercase_modified.txt"
     words_string = File.read!(words_path)
 
     Logger.info("splitting wordlist...")
