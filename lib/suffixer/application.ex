@@ -7,6 +7,9 @@ defmodule Suffixer.Application do
 
   def start(_type, _args) do
 
+    IO.inpsect Mix.env()
+    IO.inspect Application.loaded_applications()
+
     port_string = System.get_env("PORT") || "8888"
     port = String.to_integer(port_string)
 
