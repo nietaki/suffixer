@@ -1,5 +1,5 @@
 defmodule Suffixer.Web do
-  use Ace.HTTP.Service, [port: 8080, cleartext: true]
+  use Ace.HTTP.Service, [cleartext: true]
 
   def handle_request(_request = %{path: ["s", suffix]}, config) do
     response(:ok)
