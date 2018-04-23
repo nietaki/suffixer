@@ -25,8 +25,8 @@ defmodule Suffixer.MixProject do
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
       {:ace, "0.16.0"},
-      {:mix_test_watch, "~> 0.5", only: :dev, runtime: false},
-      {:evil_left_pad, "~> 0.3.0"}
+      {:evil_left_pad, "~> 0.2.0"},
+      {:hoplon, ">= 0.0.0"}
     ]
   end
 end
