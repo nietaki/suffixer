@@ -11,7 +11,7 @@ defmodule Suffixer.Web do
     longest_length =
       words
       |> Enum.map(&String.length/1)
-      |> Enum.max()
+      |> Enum.max(fn -> 0 end)
 
     words_column =
       words
