@@ -7,7 +7,16 @@ defmodule Suffixer.Web do
 
   def handle_request(_request = %{path: ["s", suffix]}, _config) do
     words = Suffixer.Server.get_words_for_suffix(suffix)
-    words_column = Enum.join(words, "\n")
+
+    longest_length =
+      words
+      |> Enum.map(&String.length/1)
+      |> Enum.max(fn -> 0 end)
+
+    words_column =
+      words
+      |> Enum.map(&EvilLeftPad.left_pad(&1, longest_length))
+      |> Enum.join("\n")
     header = "words that end in \"#{suffix}\":\n\n"
 
     response(:ok)
