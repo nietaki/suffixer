@@ -1,0 +1,8 @@
+%{
+  absolved: %{
+    mime: %{
+      "78adaa84832b3680de06f88f0997e3ead3b451a440d183d688085be2d709b534" =>
+        "just formatting changes"
+    }
+  }
+}

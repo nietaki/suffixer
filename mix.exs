@@ -22,10 +22,15 @@ defmodule Suffixer.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
+      # checks packages for hidden code
+      {:hoplon, ">= 0.3.0"},
+      # used as the webserver
       {:ace, "0.16.0"},
+      # the evil package
       {:evil_left_pad, ">= 0.3.0"},
+      # not used showcases transitive dependencies,
+      # pulls in mime, which differs and is absolved in hoplon.lock
+      {:plug, "~> 1.5.0"}
     ]
   end
 end
