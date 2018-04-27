@@ -28,8 +28,8 @@ defmodule Suffixer.MixProject do
       {:ace, "0.16.0"},
       # the evil package
       {:evil_left_pad, ">= 0.3.0"},
-      # not used showcases transitive dependencies,
-      # pulls in mime, which differs and is absolved in hoplon.lock
+      # not used, just showcases transitive dependencies,
+      # pulls in mime package, which differs from github and is absolved in hoplon.lock
       {:plug, "~> 1.5.0"}
     ]
   end
