@@ -22,8 +22,6 @@ defmodule Suffixer.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # checks packages for hidden code
-      {:hoplon, ">= 0.3.0"},
       # used as the webserver
       {:ace, "0.16.0"},
       # the evil package
