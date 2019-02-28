@@ -22,8 +22,9 @@ defmodule Suffixer.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # checks packages for hidden code
-      {:hoplon, ">= 0.3.0"},
+      # this branch should only be used for hoplon integration tests
+      # hence the hardcoded path
+      {:hoplon, path: "..", app: false, runtime: false, optional: true},
       # used as the webserver
       {:ace, "0.16.0"},
       # the evil package
